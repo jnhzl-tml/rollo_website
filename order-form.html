@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Order your Rollo cinnamon rolls online.">
+  <title>Order Form | Rollo</title>
+  <link rel="icon" href="images/logo-spiral.png">
+
+  <!-- Google Fonts: Berkshire Swash (headings) and Besley (paragraphs) -->
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Besley:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER: logo + navigation -->
+  <header>
+    <div class="header-box">
+      <a href="index.html"><img class="logo" src="images/logo.png" alt="Rollo logo"></a>
+
+      <!-- hamburger button (shows on tablet and mobile) -->
+      <button id="menuButton" class="menu-button" type="button" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="menu" class="menu">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="cinnamon-rolls.html">Cinnamon Rolls</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER with the rollo name and lace -->
+  <div class="banner">
+    <a href="index.html"><img src="images/wordmark.png" alt="rollo"></a>
+  </div>
+  <div class="lace"></div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="box">
+
+      <section class="card cream-card order-card">
+        <h1>Order Form</h1>
+
+        <!--
+          This form sends the order to rollocoph@gmail.com using FormSubmit (formsubmit.co).
+          IMPORTANT: the very first time someone submits the form, FormSubmit sends an
+          activation e-mail to rollocoph@gmail.com. Click the link inside it one time
+          and after that every order will arrive in the inbox.
+        -->
+        <form id="orderForm" action="https://formsubmit.co/rollocoph@gmail.com" method="POST">
+
+          <!-- settings for FormSubmit -->
+          <input type="hidden" name="_subject" value="New Rollo Order!">
+          <input type="hidden" name="_template" value="table">
+          <!-- when the website is online you can add this line so customers come back to your site:
+          <input type="hidden" name="_next" value="https://YOUR-WEBSITE/order-form.html"> -->
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name...">
+
+        <label for="email">E-mail</label>
+        <input type="text" id="email" name="email" placeholder="Enter your e-mail address...">
+
+        <label for="contact">Contact Number</label>
+        <input type="text" id="contact" name="contact" placeholder="Enter your contact number...">
+
+        <label for="roll">Cinnamon Roll Order</label>
+        <select id="roll" name="roll">
+          <option value="">Select Cinnamon Roll Flavor</option>
+          <option>Classic Cinnamon Roll</option>
+          <option>Cookie Dough Roll</option>
+          <option>Biscoff Roll</option>
+          <option>Oreo Roll</option>
+          <option>Assorted Rolls</option>
+          <option>Birthday Cinnamon Roll</option>
+        </select>
+
+        <label for="quantity">Quantity of Cinnamon Rolls</label>
+        <input type="number" id="quantity" name="quantity" placeholder="Enter a quantity...">
+
+        <label for="payment">Mode of Payment</label>
+        <select id="payment" name="payment">
+          <option value="">Select Mode of Payment</option>
+          <option>GCash</option>
+          <option>Maya</option>
+          <option>Bank Transfer</option>
+          <option>Cash on Meetup</option>
+        </select>
+
+        <label for="delivery">Mode of Delivery</label>
+        <select id="delivery" name="delivery">
+          <option value="">Select Mode of Delivery</option>
+          <option>Lalamove</option>
+          <option>Maxim</option>
+          <option>Meetup (Around Angeles City)</option>
+        </select>
+
+          <p id="message"></p>
+
+          <div class="form-button">
+            <button type="submit" class="button dark-button">Submit &#10148;</button>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Copyright <span id="year">2026</span> - All Rights Reserved</p>
+    <a href="https://www.facebook.com/" target="_blank">Facebook: rollo</a>
+    <a href="https://www.instagram.com/rolloco.ph" target="_blank">Instagram: @rolloco.ph</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="See the Rollo menu: Classic, Cookie Dough, Biscoff, Oreo, Assorted and Birthday cinnamon rolls with prices.">
+  <title>Cinnamon Rolls | Rollo</title>
+  <link rel="icon" href="images/logo-spiral.png">
+
+  <!-- Google Fonts: Berkshire Swash (headings) and Besley (paragraphs) -->
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Besley:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER: logo + navigation -->
+  <header>
+    <div class="header-box">
+      <a href="index.html"><img class="logo" src="images/logo.png" alt="Rollo logo"></a>
+
+      <!-- hamburger button (shows on tablet and mobile) -->
+      <button id="menuButton" class="menu-button" type="button" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="menu" class="menu">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="cinnamon-rolls.html" class="current">Cinnamon Rolls</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER with the rollo name and lace -->
+  <div class="banner">
+    <a href="index.html"><img src="images/wordmark.png" alt="rollo"></a>
+  </div>
+  <div class="lace"></div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="box">
+
+      <section>
+        <h1 class="page-title">Menu</h1>
+
+        <div class="menu-frame">
+          <table class="menu-table">
+            <caption class="hidden">Rollo cinnamon rolls and prices</caption>
+          <tr>
+            <td><img src="images/menu-classic.jpg" alt="Classic cinnamon roll"></td>
+            <th scope="row" class="roll-name">Classic<br>Cinnamon<br>Roll</th>
+            <td class="roll-price">SOLO - ₱70.00<br>4PCS - ₱260.00<br>6PCS - ₱380.00</td>
+          </tr>
+          <tr>
+            <td><img src="images/menu-cookie-dough.jpg" alt="Cookie dough roll"></td>
+            <th scope="row" class="roll-name">Cookie<br>Dough<br>Roll</th>
+            <td class="roll-price">SOLO - ₱80<br>4PCS - ₱300<br>6PCS - ₱430</td>
+          </tr>
+          <tr>
+            <td><img src="images/menu-biscoff.jpg" alt="Biscoff roll"></td>
+            <th scope="row" class="roll-name">Biscoff<br>Roll</th>
+            <td class="roll-price">SOLO - ₱90<br>4PCS - ₱340<br>6PCS - ₱510</td>
+          </tr>
+          <tr>
+            <td><img src="images/menu-oreo.jpg" alt="Oreo roll"></td>
+            <th scope="row" class="roll-name">Oreo Roll</th>
+            <td class="roll-price">SOLO - ₱85<br>4PCS - ₱320<br>6PCS - ₱480</td>
+          </tr>
+          <tr>
+            <td><img src="images/menu-assorted.jpg" alt="Assorted rolls"></td>
+            <th scope="row" class="roll-name">Assorted<br>Rolls</th>
+            <td class="roll-price">4PCS - ₱320<br>6PCS - ₱450</td>
+          </tr>
+          <tr>
+            <td><img src="images/menu-birthday.jpg" alt="Birthday cinnamon roll"></td>
+            <th scope="row" class="roll-name">Birthday<br>Cinnamon<br>Roll</th>
+            <td class="roll-price free-note">FREE w/ any 6pcs box purchase for birthday celebrants</td>
+          </tr>
+          </table>
+        </div>
+
+        <div class="menu-order">
+          <a class="button cream-button" href="order-form.html">Order Here!</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Copyright <span id="year">2026</span> - All Rights Reserved</p>
+    <a href="https://www.facebook.com/" target="_blank">Facebook: rollo</a>
+    <a href="https://www.instagram.com/rolloco.ph" target="_blank">Instagram: @rolloco.ph</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

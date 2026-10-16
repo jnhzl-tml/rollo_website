@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rollo sells freshly baked homemade cinnamon rolls in Angeles City, Pampanga. Buy 5 rolls, get 1 FREE!">
+  <title>Rollo | Homemade Cinnamon Rolls</title>
+  <link rel="icon" href="images/logo-spiral.png">
+
+  <!-- Google Fonts: Berkshire Swash (headings) and Besley (paragraphs) -->
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Besley:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER: logo + navigation -->
+  <header>
+    <div class="header-box">
+      <a href="index.html"><img class="logo" src="images/logo.png" alt="Rollo logo"></a>
+
+      <!-- hamburger button (shows on tablet and mobile) -->
+      <button id="menuButton" class="menu-button" type="button" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="menu" class="menu">
+        <ul>
+        <li><a href="index.html" class="current">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="cinnamon-rolls.html">Cinnamon Rolls</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER with the rollo name and lace -->
+  <div class="banner">
+    <a href="index.html"><img src="images/wordmark.png" alt="rollo"></a>
+  </div>
+  <div class="lace"></div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="box">
+
+      <!-- Welcome -->
+      <section class="card cream-card welcome">
+        <div class="welcome-text">
+          <h1>Welcome to Rollo! ♡</h1>
+          <p>
+            Welcome to Rollo, where <strong>we’re rolling sweetness your way!</strong>
+            Freshly baked with care and passion, our homemade sweet rolls are crafted to
+            bring joy, comfort, and delicious moments to every customer. What started as a
+            love for baking has grown into a small business dedicated to sharing warm,
+            delightful treats that can be enjoyed with family and friends.
+          </p>
+          <a class="button dark-button" href="cinnamon-rolls.html">Roll Into Sweetness</a>
+        </div>
+        <figure class="welcome-photo-box">
+          <img class="welcome-photo" src="images/welcome-rolls.jpg" alt="Freshly baked cinnamon rolls">
+        </figure>
+      </section>
+
+      <!-- Loyalty card -->
+      <section class="card cream-card loyalty">
+        <img src="images/loyalty-card.png" alt="Rollo loyalty card, front and back">
+        <div class="loyalty-text">
+          <h2>Rollo Loyalty Card</h2>
+          <p>Buy 5 rolls, get 1 FREE!<br>Collect your stamps and<br>let us roll a little extra<br>joy your way.</p>
+        </div>
+      </section>
+
+      <!-- Order box -->
+      <section class="card brown-card order-box">
+        <h2 class="hidden">Order now</h2>
+        <div class="text-side">
+          <p>Rolling Sweetness Your Way!</p>
+          <a class="button cream-button" href="order-form.html">Order Here!</a>
+        </div>
+        <img src="images/cta-rolls.png" alt="Iced cinnamon rolls">
+      </section>
+
+      <!-- Video -->
+      <section class="video-box">
+        <h2 class="hidden">Video</h2>
+        <video id="video" controls poster="images/video-poster.jpg">
+          <source src="videos/rollo-baking.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <button id="playButton" class="play-button" type="button" aria-label="Play video">&#9654;</button>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Copyright <span id="year">2026</span> - All Rights Reserved</p>
+    <a href="https://www.facebook.com/" target="_blank">Facebook: rollo</a>
+    <a href="https://www.instagram.com/rolloco.ph" target="_blank">Instagram: @rolloco.ph</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
