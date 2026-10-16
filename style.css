@@ -1,25 +1,3 @@
-/* ==========================================================
-   ROLLO WEBSITE - style.css
-   Used by all 5 pages (index, about, cinnamon-rolls,
-   contact, order-form)
-
-   COLORS (from the Rollo style guide)
-     Dark brown  #5A3A28   header, footer, text
-     Brown       #704620   gradients, table hover
-     Rust        #A76332   gradients, small accents
-     Gold        #D6A15B   borders, form fields, menu frame
-     Beige       #EEE6D8   cards
-     Cream       #F7F3EC   light text on brown
-     Honey       #F5D08A   headings on brown (easy to read)
-     Espresso    #3E2619   mobile menu, button hover
-
-   FONTS
-     Berkshire Swash  headings, buttons, navigation
-     Besley           paragraphs and tables
-   ========================================================== */
-
-
-/* ---------- BASIC SETTINGS ---------- */
 
 * {
   box-sizing: border-box;
@@ -65,7 +43,6 @@ a {
   overflow: hidden;
   clip: rect(0 0 0 0);
 }
-
 
 /* ---------- HEADER AND NAVIGATION ---------- */
 
