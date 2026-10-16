@@ -224,7 +224,6 @@ main {
 
 /* ---------- HOME PAGE ---------- */
 
-/* the welcome card uses CSS GRID: 2 equal columns */
 .welcome {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -257,7 +256,6 @@ main {
   display: block;
 }
 
-/* the loyalty card uses FLEXBOX: picture + text side by side */
 .loyalty {
   display: flex;
   align-items: center;
@@ -346,7 +344,7 @@ main {
 }
 
 
-/* ---------- ABOUT PAGE ---------- */
+/* ---------- ABOUT US PAGE ---------- */
 
 .vision-box {
   text-align: center;
@@ -369,7 +367,7 @@ main {
   margin: 8px auto 18px auto;
 }
 
-/* Behind-the-Rollo uses CSS GRID: picture + text */
+/* Behind-the-Rollo */
 .behind {
   display: grid;
   grid-template-columns: 5fr 6fr;
@@ -397,8 +395,7 @@ main {
   line-height: 1.6;
 }
 
-
-/* ---------- MENU PAGE ---------- */
+/* ---------- MENU PAGE - CINNAMON ROLLS ---------- */
 
 .page-title {
   font-family: "Berkshire Swash", Georgia, serif;
@@ -435,7 +432,7 @@ main {
   font-weight: bold;
 }
 
-/* first column = the picture, so it gets its own width */
+/* first column */
 .menu-table td:first-child {
   width: 210px;
 }
@@ -477,7 +474,7 @@ main {
 }
 
 
-/* ---------- CONTACT PAGE ---------- */
+/* ---------- CONTACT US PAGE ---------- */
 
 .contact-box {
   max-width: 800px;
@@ -631,11 +628,9 @@ footer a:hover {
 }
 
 
-/* ==========================================================
-   RESPONSIVE (media queries)
-   ========================================================== */
+/* RESPONSIVE (media queries) */
 
-/* Very large screens (1920px and up) */
+/* Large Screens - Desktop */
 @media (min-width: 1920px) {
   body { font-size: 21px; }
   header, .header-box { height: 80px; }
@@ -655,13 +650,12 @@ footer a:hover {
   footer { font-size: 20px; }
 }
 
-/* Tablet and mobile (1023px and below): hamburger menu */
+/* Tablet and mobile: hamburger menu */
 @media (max-width: 1023px) {
   .menu-button {
     display: block;
   }
 
-  /* the menu is hidden until the button is clicked */
   .menu {
     display: none;
     position: absolute;
@@ -697,7 +691,7 @@ footer a:hover {
   }
 }
 
-/* Mobile only (767px and below): everything in one column */
+/* Mobile */
 @media (max-width: 767px) {
   header, .header-box { height: 60px; }
   .logo { height: 40px; }
@@ -716,7 +710,6 @@ footer a:hover {
     padding: 25px 20px;
   }
 
-  /* grid cards become 1 column, the photo goes first */
   .welcome,
   .behind {
     grid-template-columns: 1fr;
@@ -736,7 +729,6 @@ footer a:hover {
     text-align: center;
   }
 
-  /* flexbox cards stack on top of each other */
   .loyalty {
     flex-direction: column;
     text-align: center;
@@ -770,7 +762,7 @@ footer a:hover {
   .menu-table .roll-name { font-size: 22px; }
 }
 
-/* Small phones (420px and below) */
+/* Small phones */
 @media (max-width: 420px) {
   .menu-frame { padding: 8px; }
   .menu-table td, .menu-table th { padding: 10px 6px; }

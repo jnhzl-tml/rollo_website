@@ -6,20 +6,18 @@
   <meta name="description" content="Order your Rollo cinnamon rolls online.">
   <title>Order Form | Rollo</title>
   <link rel="icon" href="images/logo-spiral.png">
-
-  <!-- Google Fonts: Berkshire Swash (headings) and Besley (paragraphs) -->
   <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Besley:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER: logo + navigation -->
+  <!-- HEADER: logo and navigation -->
   <header>
     <div class="header-box">
       <a href="index.html"><img class="logo" src="images/logo.png" alt="Rollo logo"></a>
 
-      <!-- hamburger button (shows on tablet and mobile) -->
+      <!-- hamburger button (tablet and mobile) -->
       <button id="menuButton" class="menu-button" type="button" aria-label="Menu">
         <span></span>
         <span></span>
@@ -37,32 +35,25 @@
     </div>
   </header>
 
-  <!-- BANNER with the rollo name and lace -->
+  <!-- BANNER for rollo name and lace -->
   <div class="banner">
     <a href="index.html"><img src="images/wordmark.png" alt="rollo"></a>
   </div>
   <div class="lace"></div>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN -->
   <main>
     <div class="box">
 
       <section class="card cream-card order-card">
         <h1>Order Form</h1>
 
-        <!--
-          This form sends the order to rollocoph@gmail.com using FormSubmit (formsubmit.co).
-          IMPORTANT: the very first time someone submits the form, FormSubmit sends an
-          activation e-mail to rollocoph@gmail.com. Click the link inside it one time
-          and after that every order will arrive in the inbox.
-        -->
         <form id="orderForm" action="https://formsubmit.co/rollocoph@gmail.com" method="POST">
 
           <!-- settings for FormSubmit -->
           <input type="hidden" name="_subject" value="New Rollo Order!">
           <input type="hidden" name="_template" value="table">
-          <!-- when the website is online you can add this line so customers come back to your site:
-          <input type="hidden" name="_next" value="https://YOUR-WEBSITE/order-form.html"> -->
+          
 
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Enter your name...">
