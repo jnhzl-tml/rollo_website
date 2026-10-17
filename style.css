@@ -1,3 +1,7 @@
+/* ==========================================================
+   ROLLO WEBSITE - style.css
+========================================================== */
+
 
 * {
   box-sizing: border-box;
@@ -44,6 +48,7 @@ a {
   clip: rect(0 0 0 0);
 }
 
+
 /* ---------- HEADER AND NAVIGATION ---------- */
 
 header {
@@ -55,8 +60,8 @@ header {
 }
 
 .header-box {
-  width: 95%;
-  max-width: 1200px;
+  width: 90%;
+  max-width: 1150px;
   height: 70px;
   margin: 0 auto;
   display: flex;
@@ -90,7 +95,7 @@ header {
   border-bottom: 2px solid #F5D08A;
 }
 
-/* hamburger button (hidden on big screens) */
+/* hamburger button (hidden on desktop) */
 .menu-button {
   display: none;
   width: 46px;
@@ -128,29 +133,98 @@ header {
 }
 
 
-/* ---------- BANNER AND LACE ---------- */
+/* ---------- BANNER, HERO AND LACE ---------- */
 
+/* page title banner */
 .banner {
   background-color: #FFF4E2;
-  text-align: center;
-  padding: 25px 0;
+  padding: 32px 0 38px 0;
 }
 
-.banner img {
-  width: 260px;
+.banner-inner {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.banner h1 {
+  font-family: "Berkshire Swash", Georgia, serif;
+  font-weight: normal;
+  font-size: 54px;
+  line-height: 1.1;
+}
+
+.banner p {
+  font-size: 20px;
+  color: #86521F;
+  margin-top: 8px;
+}
+
+/* home page hero */
+.hero {
+  background-color: #FFF4E2;
+  padding: 45px 0 55px 0;
+}
+
+.hero-inner {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-family: "Berkshire Swash", Georgia, serif;
+  font-weight: normal;
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.hero-text p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: #86521F;
+  margin-bottom: 28px;
+}
+
+.hero-text strong {
+  color: #5A3A28;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-left: auto;
+  border-radius: 28px;
+  box-shadow: 0 10px 25px rgba(60, 30, 10, 0.35);
 }
 
 .lace {
-  height: 55px;
+  height: 46px;
   background-image: url("images/lace.png");
-  background-size: 100% 100%;
+  background-repeat: repeat-x;
+  background-size: auto 46px;
+  background-position: center top;
   position: relative;
   z-index: 2;
   margin-bottom: -10px;
 }
 
 
-/* ---------- MAIN AREA (plaid background) ---------- */
+/* ---------- MAIN AREA ---------- */
 
 main {
   background-color: #D6A15B;
@@ -162,7 +236,7 @@ main {
 
 .box {
   width: 90%;
-  max-width: 1000px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -182,9 +256,10 @@ main {
   color: #F7F3EC;
 }
 
-.gradient-card {
-  background: linear-gradient(to right, #5A3A28, #704620, #A76332);
-  color: white;
+.dark-card {
+  background-color: #5A3A28;
+  color: #F7F3EC;
+  border: 3px solid #F7F3EC;
 }
 
 
@@ -195,10 +270,27 @@ main {
   font-family: "Berkshire Swash", Georgia, serif;
   font-size: 20px;
   text-decoration: none;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 30px;
   padding: 10px 28px;
   cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+/* hover */
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: wait;
 }
 
 .dark-button {
@@ -221,41 +313,41 @@ main {
   background-color: white;
 }
 
+/* transparent button */
+.outline-button {
+  background-color: transparent;
+  color: #5A3A28;
+  border-color: #5A3A28;
+}
+
+.outline-button:hover {
+  background-color: #5A3A28;
+  color: #F7F3EC;
+}
+
+.big-button {
+  font-size: 24px;
+  padding: 10px 38px;
+}
+
+/* a clear outline when someone uses the keyboard (Tab key) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #A76332;
+  outline-offset: 3px;
+}
+
+header a:focus-visible,
+header button:focus-visible {
+  outline-color: #F5D08A;
+}
+
 
 /* ---------- HOME PAGE ---------- */
 
-.welcome {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  align-items: center;
-}
-
-.welcome-text h1 {
-  font-family: "Berkshire Swash", Georgia, serif;
-  font-weight: normal;
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-
-.welcome-text p {
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: justify;
-  color: #86521F;
-  margin-bottom: 22px;
-}
-
-.welcome-text strong {
-  color: #5A3A28;
-}
-
-.welcome-photo {
-  width: 100%;
-  border-radius: 26px;
-  display: block;
-}
-
+/* the loyalty card */
 .loyalty {
   display: flex;
   align-items: center;
@@ -285,10 +377,23 @@ main {
   color: #86521F;
 }
 
+/* order box and video */
+.home-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.home-row .card {
+  margin-bottom: 0;
+}
+
 .order-box {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 18px;
   padding: 25px;
 }
 
@@ -301,7 +406,7 @@ main {
 }
 
 .order-box img {
-  width: 180px;
+  width: 210px;
 }
 
 .order-box .text-side {
@@ -313,12 +418,13 @@ main {
   background-color: black;
   border-radius: 8px;
   overflow: hidden;
-  height: 360px;
+  min-height: 320px;
 }
 
 .video-box video {
   width: 100%;
-  height: 360px;
+  height: 100%;
+  min-height: 320px;
   object-fit: cover;
   display: block;
 }
@@ -344,10 +450,14 @@ main {
 }
 
 
-/* ---------- ABOUT US PAGE ---------- */
+/* ---------- ABOUT PAGE ---------- */
 
+/* Vision and Mission */
 .vision-box {
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: start;
 }
 
 .vision-box h2,
@@ -363,8 +473,7 @@ main {
   font-size: 21px;
   font-weight: bold;
   line-height: 1.5;
-  max-width: 480px;
-  margin: 8px auto 18px auto;
+  margin-top: 10px;
 }
 
 /* Behind-the-Rollo */
@@ -382,7 +491,7 @@ main {
 }
 
 .behind-text {
-  text-align: right;
+  text-align: left;
 }
 
 .behind-text h2 {
@@ -395,20 +504,11 @@ main {
   line-height: 1.6;
 }
 
-/* ---------- MENU PAGE - CINNAMON ROLLS ---------- */
 
-.page-title {
-  font-family: "Berkshire Swash", Georgia, serif;
-  font-weight: normal;
-  font-size: 70px;
-  text-align: center;
-  color: #F7F3EC;
-  text-shadow: 3px 3px 0 #5A3A28, -2px -2px 0 #5A3A28, 2px -2px 0 #5A3A28, -2px 2px 0 #5A3A28;
-  margin-bottom: 20px;
-}
+/* ---------- MENU PAGE ---------- */
 
 .menu-frame {
-  width: 760px;
+  width: 900px;
   max-width: 100%;
   margin: 0 auto;
   background-color: #D6A15B;
@@ -434,12 +534,13 @@ main {
 
 /* first column */
 .menu-table td:first-child {
-  width: 210px;
+  width: 240px;
 }
 
 .menu-table img {
-  width: 170px;
-  height: 170px;
+  width: 200px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 20px;
   display: block;
@@ -449,7 +550,7 @@ main {
 .menu-table .roll-name {
   font-family: "Berkshire Swash", Georgia, serif;
   font-weight: normal;
-  font-size: 28px;
+  font-size: 30px;
   line-height: 1.3;
 }
 
@@ -469,29 +570,33 @@ main {
 }
 
 .menu-order {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
   margin-top: 30px;
 }
 
 
-/* ---------- CONTACT US PAGE ---------- */
+/* ---------- CONTACT PAGE ---------- */
 
 .contact-box {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 45px;
+  align-items: center;
 }
 
 .contact-box .lead {
-  font-size: 22px;
+  grid-column: 1 / -1;
+  font-size: 24px;
   font-weight: bold;
-  margin-bottom: 15px;
 }
 
 .contact-box h2 {
   font-family: "Berkshire Swash", Georgia, serif;
   font-weight: normal;
-  font-size: 44px;
+  font-size: 40px;
   color: #F5D08A;
   text-shadow: 2px 3px 4px rgba(30, 12, 4, 0.8);
   margin: 8px 0 10px 0;
@@ -502,25 +607,24 @@ main {
 }
 
 .contact-box p {
-  font-size: 23px;
-  font-weight: bold;
-  line-height: 1.5;
+  font-size: 21px;
+  line-height: 1.6;
 }
 
 .contact-box a {
+  font-weight: bold;
   text-decoration: none;
 }
 
 .contact-box a:hover {
   color: #F5D08A;
+  text-decoration: underline;
 }
 
 .map {
-  width: 420px;
-  max-width: 100%;
-  height: 260px;
-  margin: 22px auto 0 auto;
-  border: 4px solid #5A3A28;
+  width: 100%;
+  height: 360px;
+  border: 4px solid #F7F3EC;
   background-color: #DDDDDD;
 }
 
@@ -533,26 +637,50 @@ main {
 
 /* ---------- ORDER FORM PAGE ---------- */
 
+/* left: picture panel, right: the form */
 .order-card {
-  max-width: 650px;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: 40px;
+  align-items: start;
 }
 
-.order-card h1 {
-  font-family: "Berkshire Swash", Georgia, serif;
-  font-weight: normal;
-  font-size: 64px;
+.order-side {
+  background-color: #5A3A28;
+  color: #F7F3EC;
+  border-radius: 18px;
+  padding: 30px 25px;
   text-align: center;
-  color: white;
-  text-shadow: 3px 3px 0 #5A3A28, -2px -2px 0 #5A3A28, 2px -2px 0 #5A3A28, -2px 2px 0 #5A3A28;
-  margin-bottom: 25px;
 }
 
-.order-card form {
-  width: 450px;
-  max-width: 100%;
-  margin: 0 auto;
+.order-side img {
+  width: 100%;
+  max-width: 260px;
+}
+
+.order-side .side-title {
+  font-family: "Berkshire Swash", Georgia, serif;
+  font-style: italic;
+  font-size: 28px;
+  line-height: 1.3;
+  color: #F5D08A;
+  margin: 15px 0 10px 0;
+}
+
+.order-side p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.order-main form {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-note {
+  font-size: 15px;
+  color: #6B4A38;
 }
 
 .order-card label {
@@ -578,28 +706,79 @@ main {
 
 .order-card input:focus,
 .order-card select:focus {
-  outline: none;
   border-color: #5A3A28;
 }
 
+/* red = something is wrong, green = box is OK */
 .order-card .wrong {
   border-color: #B3261E;
+  background-color: #F0C9A0;
+}
+
+.order-card .right {
+  border-color: #2E7D32;
+}
+
+/* the small red text under each box */
+.error {
+  display: block;
+  color: #B3261E;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.error:empty {
+  display: none;
 }
 
 .form-button {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 25px;
 }
 
-.form-button button {
+.form-button .button {
   font-size: 20px;
 }
 
 #message {
-  text-align: center;
   font-size: 17px;
   margin-top: 15px;
   color: #B3261E;
+  font-weight: bold;
+}
+
+#message.good {
+  color: #2E7D32;
+}
+
+/* thank you message after the order is sent */
+.thanks {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.thanks h2 {
+  font-family: "Berkshire Swash", Georgia, serif;
+  font-weight: normal;
+  font-size: 44px;
+  margin-bottom: 10px;
+}
+
+.thanks p {
+  font-size: 19px;
+  line-height: 1.5;
+  color: #86521F;
+}
+
+.thanks .form-button {
+  justify-content: center;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 
@@ -607,55 +786,72 @@ main {
 
 footer {
   background-color: #5A3A28;
-  color: #F7F3EC;
+  color: #D9CDB8;
   text-align: center;
-  font-size: 17px;
-  font-weight: bold;
-  padding: 25px 15px;
+  font-size: 15px;
+  padding: 22px 15px;
 }
 
 footer p {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 footer a {
+  color: #EEE6D8;
   text-decoration: none;
-  margin: 0 12px;
+  margin: 0 10px;
 }
 
 footer a:hover {
   color: #F5D08A;
+  text-decoration: underline;
 }
 
 
-/* RESPONSIVE (media queries) */
+/* ==========================================================
+  RESPONSIVE (media queries)
+========================================================== */
 
-/* Large Screens - Desktop */
+/* Large screens */
 @media (min-width: 1920px) {
   body { font-size: 21px; }
   header, .header-box { height: 80px; }
+  .header-box, .banner-inner, .hero-inner { max-width: 1400px; }
   .logo { height: 56px; }
-  .menu a { font-size: 25px; }
-  .box { max-width: 1250px; }
+  .menu a { font-size: 24px; }
+  .box { max-width: 1400px; }
+  .banner h1 { font-size: 64px; }
+  .banner p { font-size: 23px; }
+  .hero-text h1 { font-size: 70px; }
+  .hero-text p { font-size: 22px; }
+  .hero-photo img { max-width: 560px; }
+  .lace { height: 55px; background-size: auto 55px; }
   main { background-size: 1100px; }
-  .welcome-text p { font-size: 21px; }
-  .menu-frame { width: 880px; }
-  .menu-table td:first-child { width: 240px; }
-  .menu-table img { width: 200px; height: 200px; }
-  .menu-table .roll-name { font-size: 32px; }
-  .menu-table .roll-price { font-size: 24px; }
-  .order-card { max-width: 750px; }
-  .order-card form { width: 520px; }
+  .menu-frame { width: 1000px; }
+  .menu-table td:first-child { width: 270px; }
+  .menu-table img { width: 220px; }
+  .menu-table .roll-name { font-size: 34px; }
+  .menu-table .roll-price { font-size: 25px; }
+  .order-card { max-width: 1150px; }
   .order-card label, .order-card input, .order-card select { font-size: 20px; }
-  footer { font-size: 20px; }
+  .contact-box p { font-size: 24px; }
+  .map { height: 420px; }
+  footer { font-size: 17px; }
 }
 
-/* Tablet and mobile: hamburger menu */
+/* Laptop */
+@media (max-width: 1200px) {
+  .hero-text h1 { font-size: 48px; }
+  .hero-inner { gap: 35px; }
+}
+
+/* Tablet and mobile : hamburger menu */
 @media (max-width: 1023px) {
   .menu-button {
     display: block;
   }
 
+  /* the menu is hidden until the button is clicked */
   .menu {
     display: none;
     position: absolute;
@@ -689,17 +885,39 @@ footer a:hover {
   main {
     background-size: 650px;
   }
+
+  .hero-inner,
+  .vision-box,
+  .contact-box,
+  .home-row,
+  .order-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo img {
+    margin: 0 auto;
+  }
+
+  .map {
+    height: 300px;
+  }
 }
 
-/* Mobile */
+/* Mobile  */
 @media (max-width: 767px) {
   header, .header-box { height: 60px; }
   .logo { height: 40px; }
   .menu { top: 60px; }
 
-  .banner img { width: 190px; }
-  .banner { padding: 18px 0; }
-  .lace { height: 35px; }
+  .banner { padding: 24px 0 28px 0; text-align: center; }
+  .banner h1 { font-size: 40px; }
+  .banner p { font-size: 18px; }
+  .hero { padding: 30px 0 38px 0; }
+  .hero-text { text-align: center; }
+  .hero-text h1 { font-size: 36px; }
+  .hero-text p { font-size: 18px; }
+  .hero-buttons { justify-content: center; }
+  .lace { height: 34px; background-size: auto 34px; }
 
   main {
     padding: 30px 0 40px 0;
@@ -710,14 +928,15 @@ footer a:hover {
     padding: 25px 20px;
   }
 
-  .welcome,
+  .vision-box,
+  .contact-box {
+    text-align: center;
+    gap: 20px;
+  }
+
   .behind {
     grid-template-columns: 1fr;
     text-align: center;
-  }
-
-  .welcome-photo-box {
-    order: -1;
   }
 
   .behind img {
@@ -729,6 +948,7 @@ footer a:hover {
     text-align: center;
   }
 
+  /* flexbox cards stack */
   .loyalty {
     flex-direction: column;
     text-align: center;
@@ -739,36 +959,63 @@ footer a:hover {
     width: 100%;
   }
 
-  .welcome-text h1 { font-size: 34px; }
   .loyalty-text h2 { font-size: 38px; }
   .loyalty-text p { font-size: 24px; }
 
-  .order-box {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .video-box,
   .video-box video {
+    min-height: 220px;
     height: 240px;
   }
 
-  .page-title { font-size: 56px; }
-  .order-card h1 { font-size: 50px; }
-  .contact-box h2 { font-size: 36px; }
-  .contact-box p { font-size: 20px; }
-  .menu-table td:first-child { width: 150px; }
-  .menu-table img { width: 120px; height: 120px; }
-  .menu-table .roll-name { font-size: 22px; }
+  .vision-box h2,
+  .behind-text h2 { font-size: 38px; }
+  .contact-box h2 { font-size: 34px; }
+  .contact-box p { font-size: 19px; }
+
+  /* the picture panel */
+  .order-side { order: 2; }
+  .order-card { padding: 22px 18px; }
+  .form-button { justify-content: center; }
+
+  /* MENU TABLE on phones */
+  .menu-frame { padding: 10px; }
+
+  .menu-table,
+  .menu-table tbody,
+  .menu-table tr,
+  .menu-table td,
+  .menu-table th {
+    display: block;
+    width: 100%;
+  }
+
+  .menu-table tr {
+    padding: 18px 12px 20px 12px;
+    border-bottom: 1px solid #D6A15B;
+  }
+
+  .menu-table td,
+  .menu-table th {
+    border: none;
+    padding: 6px 0;
+  }
+
+  .menu-table td:first-child { width: 100%; }
+
+  .menu-table img {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .menu-table .roll-name { font-size: 28px; }
+  .menu-table .roll-name br { display: none; }
+  .menu-table .roll-price { font-size: 20px; }
 }
 
 /* Small phones */
 @media (max-width: 420px) {
-  .menu-frame { padding: 8px; }
-  .menu-table td, .menu-table th { padding: 10px 6px; }
-  .menu-table td:first-child { width: 110px; }
-  .menu-table img { width: 95px; height: 95px; border-radius: 14px; }
-  .menu-table .roll-name { font-size: 19px; }
-  .menu-table .roll-price { font-size: 15px; }
   .cream-button { font-size: 24px; padding: 10px 30px; }
+  .big-button { font-size: 20px; padding: 10px 24px; }
+  .hero-text h1 { font-size: 32px; }
 }

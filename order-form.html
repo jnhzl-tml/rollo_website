@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Order your Rollo cinnamon rolls online.">
   <title>Order Form | Rollo</title>
-  <link rel="icon" href="images/logo-spiral.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Besley:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -35,9 +37,13 @@
     </div>
   </header>
 
-  <!-- BANNER for rollo name and lace -->
+
+  <!-- PAGE TITLE BANNER -->
   <div class="banner">
-    <a href="index.html"><img src="images/wordmark.png" alt="rollo"></a>
+    <div class="banner-inner">
+      <h1>Order Form</h1>
+      <p>Tell us what you would like to roll home</p>
+    </div>
   </div>
   <div class="lace"></div>
 
@@ -46,26 +52,39 @@
     <div class="box">
 
       <section class="card cream-card order-card">
-        <h1>Order Form</h1>
 
-        <form id="orderForm" action="https://formsubmit.co/rollocoph@gmail.com" method="POST">
+        <!-- left side -->
+        <aside class="order-side">
+          <img src="images/cta-rolls.png" alt="Iced cinnamon rolls">
+          <p class="side-title">Rolling Sweetness Your Way!</p>
+          <p>Fill in the form and we will message you to confirm your order.</p>
+        </aside>
+
+        <div class="order-main">
+        
+        <form id="orderForm" action="https://formsubmit.co/rollocoph@gmail.com" method="POST" novalidate>
 
           <!-- settings for FormSubmit -->
           <input type="hidden" name="_subject" value="New Rollo Order!">
           <input type="hidden" name="_template" value="table">
-          
+          <input type="hidden" name="_captcha" value="false">
+
+          <p class="form-note">All boxes are required.</p>
 
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name...">
+        <input type="text" id="name" name="name" placeholder="e.g. Juan Dela Cruz" aria-describedby="name-error" autocomplete="name">
+        <span class="error" id="name-error"></span>
 
         <label for="email">E-mail</label>
-        <input type="text" id="email" name="email" placeholder="Enter your e-mail address...">
+        <input type="text" id="email" name="email" placeholder="e.g. juan@gmail.com" aria-describedby="email-error" autocomplete="email">
+        <span class="error" id="email-error"></span>
 
         <label for="contact">Contact Number</label>
-        <input type="text" id="contact" name="contact" placeholder="Enter your contact number...">
+        <input type="text" id="contact" name="contact" placeholder="e.g. 0917 123 4567" aria-describedby="contact-error" inputmode="tel" autocomplete="tel">
+        <span class="error" id="contact-error"></span>
 
         <label for="roll">Cinnamon Roll Order</label>
-        <select id="roll" name="roll">
+        <select id="roll" name="roll" aria-describedby="roll-error">
           <option value="">Select Cinnamon Roll Flavor</option>
           <option>Classic Cinnamon Roll</option>
           <option>Cookie Dough Roll</option>
@@ -74,33 +93,50 @@
           <option>Assorted Rolls</option>
           <option>Birthday Cinnamon Roll</option>
         </select>
+        <span class="error" id="roll-error"></span>
 
         <label for="quantity">Quantity of Cinnamon Rolls</label>
-        <input type="number" id="quantity" name="quantity" placeholder="Enter a quantity...">
+        <input type="number" id="quantity" name="quantity" placeholder="e.g. 4 (1 to 100)" aria-describedby="quantity-error" min="1" max="100">
+        <span class="error" id="quantity-error"></span>
 
         <label for="payment">Mode of Payment</label>
-        <select id="payment" name="payment">
+        <select id="payment" name="payment" aria-describedby="payment-error">
           <option value="">Select Mode of Payment</option>
           <option>GCash</option>
           <option>Maya</option>
           <option>Bank Transfer</option>
           <option>Cash on Meetup</option>
         </select>
+        <span class="error" id="payment-error"></span>
 
         <label for="delivery">Mode of Delivery</label>
-        <select id="delivery" name="delivery">
+        <select id="delivery" name="delivery" aria-describedby="delivery-error">
           <option value="">Select Mode of Delivery</option>
           <option>Lalamove</option>
           <option>Maxim</option>
           <option>Meetup (Around Angeles City)</option>
         </select>
+        <span class="error" id="delivery-error"></span>
 
-          <p id="message"></p>
+          <p id="message" role="alert"></p>
 
           <div class="form-button">
-            <button type="submit" class="button dark-button">Submit &#10148;</button>
+            <button type="submit" id="submitButton" class="button dark-button">Submit &#10148;</button>
+            <a class="button outline-button" href="index.html">&#8592; Back to Home</a>
           </div>
         </form>
+
+        <!-- shown after the order is sent -->
+        <div id="thanks" class="thanks" hidden>
+          <h2>Thank you!</h2>
+          <p>Your order was sent. We will contact you soon to confirm it.</p>
+          <div class="form-button">
+            <a class="button dark-button" href="index.html">Back to Home</a>
+            <a class="button outline-button" href="cinnamon-rolls.html">See the Menu</a>
+            <button type="button" id="orderAgain" class="button outline-button">Order Again</button>
+          </div>
+        </div>
+        </div>
       </section>
 
     </div>
@@ -109,7 +145,7 @@
   <!-- FOOTER -->
   <footer>
     <p>© Copyright <span id="year">2026</span> - All Rights Reserved</p>
-    <a href="https://www.facebook.com/profile.php?id=61591078773030" target="_blank">Facebook: rollo</a>
+    <a href="https://www.facebook.com/" target="_blank">Facebook: rollo</a>
     <a href="https://www.instagram.com/rolloco.ph" target="_blank">Instagram: @rolloco.ph</a>
   </footer>
 

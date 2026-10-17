@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Rollo sells freshly baked homemade cinnamon rolls in Angeles City, Pampanga. Buy 5 rolls, get 1 FREE!">
   <title>Rollo | Homemade Cinnamon Rolls</title>
-  <link rel="icon" href="images/logo-spiral.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Besley:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -35,33 +37,34 @@
     </div>
   </header>
 
-  <!-- BANNER for rollo name and lace -->
-  <div class="banner">
-    <a href="index.html"><img src="images/wordmark.png" alt="rollo"></a>
-  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Welcome to Rollo! ♡</h1>
+        <p>
+          Welcome to Rollo, where <strong>we’re rolling sweetness your way!</strong>
+          Freshly baked with care and passion, our homemade sweet rolls are crafted to
+          bring joy, comfort, and delicious moments to every customer. What started as a
+          love for baking has grown into a small business dedicated to sharing warm,
+          delightful treats that can be enjoyed with family and friends.
+        </p>
+        <div class="hero-buttons">
+          <a class="button dark-button" href="cinnamon-rolls.html">Roll Into Sweetness</a>
+          <a class="button outline-button" href="order-form.html">Order Here!</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="images/welcome-rolls.jpg" alt="Freshly baked cinnamon rolls">
+      </figure>
+    </div>
+  </section>
   <div class="lace"></div>
 
   <!-- MAIN -->
   <main>
     <div class="box">
-
-      <!-- Welcome to Rollo -->
-      <section class="card cream-card welcome">
-        <div class="welcome-text">
-          <h1>Welcome to Rollo! ♡</h1>
-          <p>
-            Welcome to Rollo, where <strong>we’re rolling sweetness your way!</strong>
-            Freshly baked with care and passion, our homemade sweet rolls are crafted to
-            bring joy, comfort, and delicious moments to every customer. What started as a
-            love for baking has grown into a small business dedicated to sharing warm,
-            delightful treats that can be enjoyed with family and friends.
-          </p>
-          <a class="button dark-button" href="cinnamon-rolls.html">Roll Into Sweetness</a>
-        </div>
-        <figure class="welcome-photo-box">
-          <img class="welcome-photo" src="images/welcome-rolls.jpg" alt="Freshly baked cinnamon rolls">
-        </figure>
-      </section>
 
       <!-- Loyalty card -->
       <section class="card cream-card loyalty">
@@ -72,7 +75,8 @@
         </div>
       </section>
 
-      <!-- Order -->
+      <div class="home-row">
+      <!-- Order box -->
       <section class="card brown-card order-box">
         <h2 class="hidden">Order now</h2>
         <div class="text-side">
@@ -91,6 +95,7 @@
         </video>
         <button id="playButton" class="play-button" type="button" aria-label="Play video">&#9654;</button>
       </section>
+      </div>
 
     </div>
   </main>
@@ -98,7 +103,7 @@
   <!-- FOOTER -->
   <footer>
     <p>© Copyright <span id="year">2026</span> - All Rights Reserved</p>
-    <a href="https://www.facebook.com/profile.php?id=61591078773030" target="_blank">Facebook: rollo</a>
+    <a href="https://www.facebook.com/" target="_blank">Facebook: rollo</a>
     <a href="https://www.instagram.com/rolloco.ph" target="_blank">Instagram: @rolloco.ph</a>
   </footer>
 
